@@ -1,0 +1,31 @@
+﻿SFCS Application
+
+version 1.0 : initial Version
+
+Version 1.1 : 
+1.Critical Icon added in error messages
+2.Store the Updated data with Remarks
+
+Version 1.2:
+1.Interlock added in updated button also
+
+version 1.3:
+1.Added export csv file
+2.add user and updated user is added
+
+version 1.4:
+Added backup folder - to stored local database file
+
+version 1.5:
+1.Search PCB Number is added
+2.Product name list added
+
+version 1.6:
+1.PCB Lock hours is implemented.(With in 48hours PCB Assembly Process should be Complete)
+2.Product Names and stage wise process are updated in server
+3.Target is updated per hour and shift wise
+4.Shif timings are included
+Shift Timing:	
+A	6:00 to 14:00
+B	14:00 to 22:00
+C	22:00 to 6:00

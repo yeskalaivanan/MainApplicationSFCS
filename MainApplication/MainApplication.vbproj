@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6312AA16-D30C-46CE-8786-8D16ACC8F10C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SFCS.My.MyApplication</StartupObject>
+    <RootNamespace>SFCS</RootNamespace>
+    <AssemblyName>SFCSApplication_ver1.6</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SFCSApplication_ver1.6.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SFCSApplication_ver1.6.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons\Double-J-Design-Electronics-PCB.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\mysql-for-visualstudio-1.2.9-noinstall\15.0v461\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Web.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization.Design">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Web.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design">
+      <HintPath>..\packages\Microsoft.Chart.Controls.4.7.2046\lib\net35\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmaccess.Designer.vb">
+      <DependentUpon>frmaccess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmaccess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAOI.Designer.vb">
+      <DependentUpon>frmAOI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAOI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdashboard.Designer.vb">
+      <DependentUpon>frmdashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmdashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboard1.Designer.vb">
+      <DependentUpon>FrmDashboard1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDashboard1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpcb.Designer.vb">
+      <DependentUpon>frmpcb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmpcb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmproductselect.Designer.vb">
+      <DependentUpon>frmproductselect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmproductselect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmshifttimings.Designer.vb">
+      <DependentUpon>frmshifttimings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmshifttimings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmworkordercreate.Designer.vb">
+      <DependentUpon>frmworkordercreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmworkordercreate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmworkordermain.Designer.vb">
+      <DependentUpon>frmworkordermain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmworkordermain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmworkordersearch.Designer.vb">
+      <DependentUpon>frmworkordersearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmworkordersearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\adduser.Designer.vb">
+      <DependentUpon>adduser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\adduser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linewindow\AOI.Designer.vb">
+      <DependentUpon>AOI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\AOI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Login\changepassword.Designer.vb">
+      <DependentUpon>changepassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\changepassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linewindow\lasermarking.Designer.vb">
+      <DependentUpon>lasermarking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\lasermarking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\mainform.Designer.vb">
+      <DependentUpon>mainform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\mainform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\Application1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="linewindow\postwavesoldering.Designer.vb">
+      <DependentUpon>postwavesoldering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\postwavesoldering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linewindow\prewavesoldering.Designer.vb">
+      <DependentUpon>prewavesoldering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\prewavesoldering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\productinfo.Designer.vb">
+      <DependentUpon>productinfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\productinfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linewindow\rework.Designer.vb">
+      <DependentUpon>rework.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\rework.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linewindow\router.Designer.vb">
+      <DependentUpon>router.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\router.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\showdata.Designer.vb">
+      <DependentUpon>showdata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\showdata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\stagedetails.Designer.vb">
+      <DependentUpon>stagedetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\stagedetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="linewindow\touchupvi.Designer.vb">
+      <DependentUpon>touchupvi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="linewindow\touchupvi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\status.designer.vb">
+      <DependentUpon>status.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\status.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sample.Designer.vb">
+      <DependentUpon>sample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serialgeneration.Designer.vb">
+      <DependentUpon>serialgeneration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="serialgeneration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yield\Yieldaoi.Designer.vb">
+      <DependentUpon>Yieldaoi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Yield\Yieldaoi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yield\yieldfg.Designer.vb">
+      <DependentUpon>yieldfg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Yield\yieldfg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yield\yieldpostwave.Designer.vb">
+      <DependentUpon>yieldpostwave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Yield\yieldpostwave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmaccess.resx">
+      <DependentUpon>frmaccess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAOI.resx">
+      <DependentUpon>frmAOI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdashboard.resx">
+      <DependentUpon>frmdashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDashboard1.resx">
+      <DependentUpon>FrmDashboard1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmpcb.resx">
+      <DependentUpon>frmpcb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmproductselect.resx">
+      <DependentUpon>frmproductselect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmshifttimings.resx">
+      <DependentUpon>frmshifttimings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmworkordercreate.resx">
+      <DependentUpon>frmworkordercreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmworkordermain.resx">
+      <DependentUpon>frmworkordermain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmworkordersearch.resx">
+      <DependentUpon>frmworkordersearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\adduser.resx">
+      <DependentUpon>adduser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\AOI.resx">
+      <DependentUpon>AOI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\changepassword.resx">
+      <DependentUpon>changepassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\lasermarking.resx">
+      <DependentUpon>lasermarking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\mainform.resx">
+      <DependentUpon>mainform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\postwavesoldering.resx">
+      <DependentUpon>postwavesoldering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\prewavesoldering.resx">
+      <DependentUpon>prewavesoldering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\productinfo.resx">
+      <DependentUpon>productinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\rework.resx">
+      <DependentUpon>rework.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\router.resx">
+      <DependentUpon>router.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\showdata.resx">
+      <DependentUpon>showdata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\stagedetails.resx">
+      <DependentUpon>stagedetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="linewindow\touchupvi.resx">
+      <DependentUpon>touchupvi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\status.resx">
+      <DependentUpon>status.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sample.resx">
+      <DependentUpon>sample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serialgeneration.resx">
+      <DependentUpon>serialgeneration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yield\Yieldaoi.resx">
+      <DependentUpon>Yieldaoi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yield\yieldfg.resx">
+      <DependentUpon>yieldfg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yield\yieldpostwave.resx">
+      <DependentUpon>yieldpostwave.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\Double-J-Design-Electronics-PCB.ico" />
+    <Content Include="Icons\Laurent-Baumann-Blend-Computer.ico" />
+    <Content Include="Notes.txt" />
+    <None Include="Resources\file_explorer_96px.png" />
+    <None Include="packages.config" />
+    <None Include="Resources\background-blue-sky.jpg" />
+    <Content Include="Icons\Shiftercat-Celtic-Knot-Purpleblue-circleknot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
